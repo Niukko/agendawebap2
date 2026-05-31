@@ -27,3 +27,9 @@ O sistema utiliza um banco de dados SQLite chamado `agenda.db`.
 
 JoaopNikki.pythonanywhere.com
 
+--Descrição básica do banco de dados
+
+O sistema utiliza um banco de dados SQLite para armazenar as tarefas cadastradas pelo usuário. Os dados são salvos de forma permanente,
+permitindo que as tarefas continuem disponíveis mesmo após o fechamento do sistema. 
+A tabela principal contém informações como o identificador da tarefa (ID), descrição da tarefa e seu status (concluída ou pendente).
+
