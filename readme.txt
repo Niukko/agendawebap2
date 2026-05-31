@@ -16,9 +16,6 @@ O sistema utiliza um banco de dados SQLite chamado `agenda.db`.
 * SQLite
 * HTML
 * Bootstrap
-* Chatgpt(organização do codigo)
-* Pythonanywhere
-
 
 
 -MODO DE USO
