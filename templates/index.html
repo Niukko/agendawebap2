@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de Compromissos</title>
+    <link rel="icon" type="image/png" href="/static/scrolls.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h1>📅 Agenda de Compromissos</h1>
+
+        <a href="/criar" class="btn btn-success">
+            Novo Compromisso
+        </a>
+
+    </div>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <table class="table table-striped">
+
+                <thead>
+
+                    <tr>
+                        <th>Título</th>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for c in compromissos %}
+
+                    <tr>
+
+                        <td>{{ c[1] }}</td>
+                        <td>{{ c[2] }}</td>
+                        <td>{{ c[3] }}</td>
+                        <td>{{ c[4] }}</td>
+
+                        <td>
+
+                            <a href="/editar/{{ c[0] }}"
+                               class="btn btn-primary btn-sm">
+                               Editar
+                            </a>
+
+                            <a href="/excluir/{{ c[0] }}"
+                               class="btn btn-danger btn-sm">
+                               Excluir
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
